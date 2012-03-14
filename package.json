@@ -2,10 +2,10 @@
   "author": "Karl Skomski <karl@skomski.com> (http://skomski.com)",
   "name": "url2image",
   "description": "A Node.js module to create images from websites",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["url2image", "url", "image", "png", "jpg"],
   "repository": {
-    "url": ""
+    "url": "git://github.com/Skomski/node-url2image.git"
   },
   "main": "lib/Converter",
   "scripts": {
