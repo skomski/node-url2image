@@ -1,0 +1,25 @@
+{
+  "author": "Karl Skomski <karl@skomski.com> (http://skomski.com)",
+  "name": "url2image",
+  "description": "A Node.js module to create images from websites",
+  "version": "0.0.1",
+  "keywords": ["url2image", "url", "image", "png", "jpg"],
+  "repository": {
+    "url": ""
+  },
+  "main": "lib/Converter",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "urun": "0.0.6",
+    "utest": "0.0.5",
+    "coffee-script": "1.2.0"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node":">=0.4.0"
+  }
+}
