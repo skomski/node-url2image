@@ -5,7 +5,7 @@ Fs            = require 'fs'
 testFinished = false
 
 converter = new Converter
-  height : 500
+  height : 50
   format : 'png'
 
 converter.process __dirname + '/fixture/example.html', __dirname + '/result/test.png', (err) ->
