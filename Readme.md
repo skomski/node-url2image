@@ -1,6 +1,6 @@
-# node-url2png
+# node-url2image
 
-[![Build Status](https://secure.travis-ci.org/Skomski/node-url2png.png?branch=master)](http://travis-ci.org/Skomski/node-url2png)
+[![Build Status](https://secure.travis-ci.org/Skomski/node-url2image.png?branch=master)](http://travis-ci.org/Skomski/node-url2image)
 
 Convert websites into images
 
@@ -14,13 +14,13 @@ http://code.google.com/p/wkhtmltopdf/downloads/list
 ## Install
 
 ```
-npm install url2png
+npm install url2image
 ```
 
 ## Usage
 
 ```javascript
-var Converter = require('url2png');
+var Converter = require('url2image');
 
 var converter = new Converter({
   width: 200,
