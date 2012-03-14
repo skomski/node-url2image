@@ -5,15 +5,16 @@ Fs            = require 'fs'
 testFinished = false
 
 converter = new Converter
-  height : 200
-  width  : 200
+  height : 500
   format : 'png'
 
-converter.process 'http://teamliquid.net', __dirname + '/t.png', (err) ->
+converter.process __dirname + '/fixture/example.html', __dirname + '/result/test.png', (err) ->
   Assert.ifError err
 
-  file = Fs.readFileSync __dirname + '/t.png'
-  Assert.ok file.length > 0
+  fixture = Fs.readFileSync __dirname + '/result/test.png'
+  file    = Fs.readFileSync __dirname + '/fixture/example.png'
+
+  Assert.deepEqual fixture, file
   testFinished = true
 
 process.on 'exit', () ->
