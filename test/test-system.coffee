@@ -8,8 +8,10 @@ converter = new Converter
   height : 50
   format : 'png'
 
-converter.process __dirname + '/fixture/example.html', __dirname + '/result/test.png', (err) ->
+converter.process __dirname + '/fixture/example.html', __dirname + '/result/test.png', (err, stderr) ->
   Assert.ifError err
+
+  Assert.ok stderr.length > 0
 
   fixture = Fs.readFileSync __dirname + '/result/test.png'
   file    = Fs.readFileSync __dirname + '/fixture/example.png'

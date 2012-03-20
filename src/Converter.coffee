@@ -58,8 +58,13 @@ class Converter
 
   process: (input, output, cb) ->
     process = spawn 'wkhtmltoimage', @_generateArguments(input, output)
+    stderr = ''
+
+    process.stderr.on 'data', (chunk) ->
+      stderr += chunk
+
     process.on 'exit', (code) ->
       if code != 0
-        return cb new Error('WkhtmlToImage: ' + code)
+        return cb new Error('WkhtmlToImage: ' + code), stderr
 
-      cb null
+      cb null, stderr
