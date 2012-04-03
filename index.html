@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="node-url2image : convert websites into images" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>node-url2image</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Skomski/node-url2image">Fork Me on GitHub</a>
+
+          <h1 id="project_title">node-url2image</h1>
+          <h2 id="project_tagline">convert websites into images</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/Skomski/node-url2image/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/Skomski/node-url2image/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Dependencies</h2>
+
+<pre><code>wkhtmltoimage
+<a href="http://code.google.com/p/wkhtmltopdf/downloads/list">http://code.google.com/p/wkhtmltopdf/downloads/list</a>
+</code></pre>
+
+<h2>Install</h2>
+
+<pre><code>npm install url2image
+</code></pre>
+
+<h2>Usage</h2>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">Converter</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'url2image'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">converter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Converter</span><span class="p">({</span>
+  <span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nx">format</span><span class="o">:</span> <span class="s1">'png'</span>
+<span class="p">});</span>
+
+<span class="nx">converter</span><span class="p">.</span><span class="nx">process</span><span class="p">(</span><span class="s1">'<a href="http://teamliquid.net">http://teamliquid.net</a>'</span><span class="p">,</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">'/t.png'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+<span class="p">});</span>
+</pre>
+</div>
+
+
+<h2>License</h2>
+
+<p>Copyright (c) 2012 Karl Skomski</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">node-url2image maintained by <a href="https://github.com/Skomski">Skomski</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
